@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceService", "InvoiceSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionRoomService", "AuctionRoomService\AuctionRoomService.csproj", "{D8BC977A-DFDA-45DF-B676-4CCC8CE2FC5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityAuthService", "IdentityAuthService\IdentityAuthService.csproj", "{593FF200-FE34-4700-B9D5-9ECD89FC6667}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{D8BC977A-DFDA-45DF-B676-4CCC8CE2FC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8BC977A-DFDA-45DF-B676-4CCC8CE2FC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8BC977A-DFDA-45DF-B676-4CCC8CE2FC5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{593FF200-FE34-4700-B9D5-9ECD89FC6667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{593FF200-FE34-4700-B9D5-9ECD89FC6667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{593FF200-FE34-4700-B9D5-9ECD89FC6667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{593FF200-FE34-4700-B9D5-9ECD89FC6667}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{45016ADE-C4BB-407B-901F-BAB98D2CD518} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
 		{ED8A9F23-94E7-4678-881F-66A9F846EA4F} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
 		{D8BC977A-DFDA-45DF-B676-4CCC8CE2FC5D} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
+		{593FF200-FE34-4700-B9D5-9ECD89FC6667} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E050E002-5ACF-48DE-8DD5-EF3A875078DF}
