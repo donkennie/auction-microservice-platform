@@ -1,4 +1,5 @@
-﻿using MassTransit;
+﻿using KernelShared;
+using MassTransit;
 
 namespace AuctionRoomService.Features.Customers 
 {
