@@ -1,25 +1,22 @@
-﻿using AuctionRoomService.Entities;
+﻿using InvoiceService.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace AuctionRoomService.Data
+namespace InvoiceService.Data
 {
-    public class AuctionDbContext : DbContext
+    public class InvoiceDbContext : DbContext
     {
-        public AuctionDbContext(DbContextOptions options) : base(options)
+        public InvoiceDbContext(DbContextOptions options) : base(options)
         {
         }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            
+
             modelBuilder.AddInboxStateEntity();
             modelBuilder.AddOutboxMessageEntity();
             modelBuilder.AddOutboxStateEntity();
         }
-        public DbSet<Auction> Auctions { get; set; }
-        public DbSet<Item> Items { get; set; }
-   
+        public DbSet<Invoice> Invoices { get; set; }
     }
 }
