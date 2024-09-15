@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02F8D1C1-1E5D-4039-837D-9401C7CF1485}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiddingService", "BiddingService\BiddingService.csproj", "{28A0447C-2CD2-4C92-B1A5-E640E3634B01}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationService", "NotificationService\NotificationService.csproj", "{45016ADE-C4BB-407B-901F-BAB98D2CD518}"
@@ -15,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuctionRoomService", "Aucti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityAuthService", "IdentityAuthService\IdentityAuthService.csproj", "{593FF200-FE34-4700-B9D5-9ECD89FC6667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KernelShared", "KernelShared\KernelShared.csproj", "{8DD1E4D9-F9AF-450A-963B-5D63E2FAFC65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KernelShared", "KernelShared\KernelShared.csproj", "{8DD1E4D9-F9AF-450A-963B-5D63E2FAFC65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,14 +48,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{28A0447C-2CD2-4C92-B1A5-E640E3634B01} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
-		{45016ADE-C4BB-407B-901F-BAB98D2CD518} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
-		{ED8A9F23-94E7-4678-881F-66A9F846EA4F} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
-		{D8BC977A-DFDA-45DF-B676-4CCC8CE2FC5D} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
-		{593FF200-FE34-4700-B9D5-9ECD89FC6667} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
-		{8DD1E4D9-F9AF-450A-963B-5D63E2FAFC65} = {02F8D1C1-1E5D-4039-837D-9401C7CF1485}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F275600C-3826-494D-A33A-11F834B87DC1}
