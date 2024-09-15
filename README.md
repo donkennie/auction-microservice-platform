@@ -2,19 +2,19 @@
 
 ## Problem Statement
 
-The online auction market requires an improved communication system to enable effective real-time interactions among users during bidding. The system should:
+The online auction market requires an improved communication system to enable effective real-time interactions among users during bidding. The system:
 
-- Allow users to enter a bidding room.
-- Facilitate bid submissions.
-- Notify the highest bidder at the end of the auction.
-- Automatically create an invoice for the highest bidder.
+- Allows users to enter a bidding room.
+- Facilitates bid submissions.
+- Notifies the highest bidder at the end of the auction.
+- Automatically creates an invoice for the highest bidder.
 
 ## Tasks
 
 ### 1. API Development
 
 - Develop an API for the basic operations of the auction platform.
-- The API should handle user interactions with the bidding room and manage bid submissions.
+- The API handles user interactions with the bidding room and manages bid submissions.
 
 ### 2. Messaging System Implementation
 
