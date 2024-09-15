@@ -1,18 +1,24 @@
 
 
+using AuctionRoomService.Data;
+using AuctionRoomService.Features.Commands;
 using AuctionRoomService.Services;
+using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer()
-       .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()))
-       //.AddCustomDbContext(builder.Configuration)
-       //.AddCustomAuthentication(builder.Configuration)
-       //.AddCustomServices()
+       .AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateAuctionCommand).GetTypeInfo().Assembly))
+       
        .AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies())
-      // .AddCustomIntegrationTransport(builder.Configuration)
        .AddControllers();
+
+builder.Services.AddDbContext<AuctionDbContext>(Options =>
+{
+    Options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+
+});
 
 // Add services to the container.
 builder.Services.AddScoped<IAuctionRoomService, RoomService>();
