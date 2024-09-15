@@ -1,6 +1,21 @@
+
+
+using AuctionRoomService.Services;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddEndpointsApiExplorer()
+       .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()))
+       //.AddCustomDbContext(builder.Configuration)
+       //.AddCustomAuthentication(builder.Configuration)
+       //.AddCustomServices()
+       .AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies())
+      // .AddCustomIntegrationTransport(builder.Configuration)
+       .AddControllers();
+
 // Add services to the container.
+builder.Services.AddScoped<IAuctionRoomService, RoomService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

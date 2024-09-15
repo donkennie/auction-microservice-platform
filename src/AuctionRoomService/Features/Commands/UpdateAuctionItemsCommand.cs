@@ -12,9 +12,9 @@ namespace AuctionRoomService.Features.Commands
         public ItemDTO ItemDTO { get; set; }
         public sealed class Handler : IRequestHandler<UpdateAuctionItemsCommand, APIResponse>
         {
-            private readonly IAuctionService _auctionService;
+            private readonly IAuctionRoomService _auctionService;
 
-            public Handler(IAuctionService auctionService, IMapper mapper) =>
+            public Handler(IAuctionRoomService auctionService, IMapper mapper) =>
                 _auctionService = auctionService;
 
 

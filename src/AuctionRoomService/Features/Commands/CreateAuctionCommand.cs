@@ -22,10 +22,10 @@ namespace AuctionRoomService.Features.Commands
 
         public sealed class Handler : IRequestHandler<CreateAuctionCommand, APIResponse>
         {
-            private readonly IAuctionService _auctionService;
+            private readonly IAuctionRoomService _auctionService;
             private readonly IMapper _mapper;
 
-            public Handler(IAuctionService auctionService, IMapper mapper)
+            public Handler(IAuctionRoomService auctionService, IMapper mapper)
             {
                 _auctionService = auctionService;
                 _mapper = mapper;

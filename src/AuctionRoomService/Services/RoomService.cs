@@ -7,12 +7,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AuctionRoomService.Services
 {
-    public class AuctionService : IAuctionService
+    public class RoomService : IAuctionRoomService
     {
         private readonly AuctionDbContext _context;
         private readonly IMapper _mapper;
 
-        public AuctionService(AuctionDbContext context, IMapper mapper)
+        public RoomService(AuctionDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

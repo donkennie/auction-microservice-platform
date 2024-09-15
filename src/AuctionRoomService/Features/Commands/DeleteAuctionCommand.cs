@@ -12,10 +12,10 @@ namespace AuctionRoomService.Features.Commands
         public string UserId { get; set; }
         public sealed class Handler : IRequestHandler<DeleteAuctionCommand, APIResponse>
         {
-            private readonly IAuctionService _auctionService;
+            private readonly IAuctionRoomService _auctionService;
             private readonly IMapper _mapper;
 
-            public Handler(IAuctionService auctionService, IMapper mapper)
+            public Handler(IAuctionRoomService auctionService, IMapper mapper)
             {
                 _auctionService = auctionService;
                 _mapper = mapper;

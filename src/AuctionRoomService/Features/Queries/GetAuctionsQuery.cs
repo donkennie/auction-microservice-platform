@@ -11,9 +11,9 @@ namespace AuctionRoomService.Features.Queries
         public Guid Id { get; set; }
         public sealed class Handler : IRequestHandler<GetAuctionsQuery, APIResponse>
         {
-            private readonly IAuctionService _auctionService;
+            private readonly IAuctionRoomService _auctionService;
 
-            public Handler(IAuctionService auctionService, IMapper mapper) =>
+            public Handler(IAuctionRoomService auctionService, IMapper mapper) =>
                 _auctionService = auctionService;
 
             public async Task<APIResponse> Handle(GetAuctionsQuery request, CancellationToken cancellationToken)

@@ -3,7 +3,7 @@ using AuctionRoomService.Entities;
 
 namespace AuctionRoomService.Services
 {
-    public interface IAuctionService
+    public interface IAuctionRoomService
     {
         Task<List<AuctionDTO>> GetAuctionsAsync(string? date);
         Task<AuctionDTO?> GetAuctionByIdAsync(Guid id);
