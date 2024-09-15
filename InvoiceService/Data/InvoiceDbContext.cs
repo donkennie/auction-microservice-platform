@@ -12,10 +12,6 @@ namespace InvoiceService.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.AddInboxStateEntity();
-            modelBuilder.AddOutboxMessageEntity();
-            modelBuilder.AddOutboxStateEntity();
         }
         public DbSet<Invoice> Invoices { get; set; }
     }

@@ -13,10 +13,6 @@ namespace AuctionRoomService.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            
-            modelBuilder.AddInboxStateEntity();
-            modelBuilder.AddOutboxMessageEntity();
-            modelBuilder.AddOutboxStateEntity();
         }
         public DbSet<Auction> Auctions { get; set; }
         public DbSet<Item> Items { get; set; }
