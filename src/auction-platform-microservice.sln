@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityAuthService", "Iden
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KernelShared", "KernelShared\KernelShared.csproj", "{8DD1E4D9-F9AF-450A-963B-5D63E2FAFC65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayService", "GatewayService\GatewayService.csproj", "{C5725F36-4DD7-4173-B552-877F79149C3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8DD1E4D9-F9AF-450A-963B-5D63E2FAFC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DD1E4D9-F9AF-450A-963B-5D63E2FAFC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DD1E4D9-F9AF-450A-963B-5D63E2FAFC65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5725F36-4DD7-4173-B552-877F79149C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5725F36-4DD7-4173-B552-877F79149C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5725F36-4DD7-4173-B552-877F79149C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5725F36-4DD7-4173-B552-877F79149C3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
