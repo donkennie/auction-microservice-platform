@@ -30,10 +30,10 @@ builder.Services.AddMassTransit(x =>
             r.Handle<RabbitMqConnectionException>();
             r.Interval(5, TimeSpan.FromSeconds(10));
         });
-        cfg.Host(configuration["RabbitMq:Host"], "/", host =>
+        cfg.Host(builder.Configuration["RabbitMq:Host"], "/", host =>
         {
-            host.Username(configuration.GetValue("RabbitMq:Username", "guest"));
-            host.Password(configuration.GetValue("RabbitMq:Password", "guest"));
+            host.Username(builder.Configuration.GetValue("RabbitMq:Username", "guest"));
+            host.Password(builder.Configuration.GetValue("RabbitMq:Password", "guest"));
         });
 
         cfg.ConfigureEndpoints(context);
