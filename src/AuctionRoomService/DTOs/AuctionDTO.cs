@@ -6,7 +6,7 @@
         public int ReservedPrice { get; set; }
         public string Seller { get; set; }
         public string Winner { get; set; }
-        public int AmountSold { get; set; }
+        public decimal AmountSold { get; set; }
         public int CurrentHighBid { get; set; }
         public string Status { get; set; }
         public string Name { get; set; }
