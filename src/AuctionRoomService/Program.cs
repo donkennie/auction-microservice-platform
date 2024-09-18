@@ -3,6 +3,7 @@
 using AuctionRoomService.Data;
 using AuctionRoomService.Features.Commands;
 using AuctionRoomService.Services;
+using AuctionService.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -42,5 +43,14 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+try
+{
+    DbInitializer.InitDb(app);
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+}
 
 app.Run();

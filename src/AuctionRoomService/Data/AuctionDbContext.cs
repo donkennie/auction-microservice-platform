@@ -13,6 +13,7 @@ namespace AuctionRoomService.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
         }
         public DbSet<Auction> Auctions { get; set; }
         public DbSet<Item> Items { get; set; }
