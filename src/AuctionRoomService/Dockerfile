@@ -1,25 +1,34 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
+# Use the ASP.NET runtime as the base image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# Use the .NET SDK for building the application
+FROM mcr.microsoft.com/dotnet/sdk:8.0-windowsservercore-ltsc2022 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["AuctionRoomService/AuctionRoomService.csproj", "AuctionRoomService/"]
-COPY ["KernelShared/KernelShared.csproj", "KernelShared/"]
-RUN dotnet restore "./AuctionRoomService/AuctionRoomService.csproj"
-COPY . .
-WORKDIR "/src/AuctionRoomService"
-RUN dotnet build "./AuctionRoomService.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
+# Copy project files from the correct paths
+COPY src/AuctionRoomService/AuctionRoomService.csproj src/AuctionRoomService/
+COPY src/KernelShared/KernelShared.csproj src/KernelShared/
+
+# Restore dependencies
+RUN dotnet restore "src/AuctionRoomService/AuctionRoomService.csproj"
+
+# Copy the entire source directory
+COPY src/ ./
+
+# Build the application
+WORKDIR "/src/AuctionRoomService"
+RUN dotnet build "AuctionRoomService.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+# Publish the application
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./AuctionRoomService.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "AuctionRoomService.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
+# Final stage - prepare the runtime image
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .

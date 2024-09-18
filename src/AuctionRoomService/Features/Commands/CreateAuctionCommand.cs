@@ -18,7 +18,7 @@ namespace AuctionRoomService.Features.Commands
         public int? CurrentHighBid { get; set; }
         public DateTime AuctionEnd { get; set; }
         public Status Status { get; set; }
-        public Item Item { get; set; }
+        public ItemDTO Item { get; set; }
 
         public sealed class Handler : IRequestHandler<CreateAuctionCommand, APIResponse>
         {
